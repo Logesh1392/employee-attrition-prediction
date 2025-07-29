@@ -19,8 +19,6 @@ This project offers a complete machine learning pipeline for analyzing employee 
   - [5️⃣ Streamlit Dashboard](#5️⃣-streamlit-dashboard)
 - [🛠️ Technologies Used](#-technologies-used)
 - [📊 Data Description](#-data-description)
-- [🤝 Contributing](#-contributing)
-- [📝 License](#-license)
 - [📬 Contact](#-contact)
 
 ---
