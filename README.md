@@ -189,8 +189,8 @@ The dataset contains employee-level information such as:
 
 For any questions or feedback, feel free to reach out:
 
-- **Your Name** – [lokesh.waran1392@gmail.com](mailto:lokesh.waran1392@gmail.com)  
-- **GitHub** – [Logesh1392](https://github.com/Logesh1392)
+- [lokesh.waran1392@gmail.com](mailto:lokesh.waran1392@gmail.com)  
+– [Logesh1392](https://github.com/Logesh1392)
 
 ---
 
