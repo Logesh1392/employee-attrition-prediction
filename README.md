@@ -50,17 +50,16 @@ It covers everything from raw data loading, cleaning, feature engineering, model
 
 ## 📁 Project Structure
 
+```
 E:\EmployeeProject
-├── 1_push_to_postgres.py # Load Excel data and push to PostgreSQL
-├── 2_clean_and_push_back.py # Clean and save data back to DB and CSV
-├── 4_feature_engineering.py # Generate new features and save them
-├── 5_model_training.ipynb # Model training and evaluation (Jupyter)
-├── 6_streamlit_main.py # Streamlit dashboard for EDA & Prediction
-├── employee_with_features.csv # Final cleaned and feature-enhanced dataset
-├── Employee-Attrition.xlsx # Original Excel dataset (not included)
-
-yaml
-
+├── 1_push_to_postgres.py          # Load Excel data and push to PostgreSQL
+├── 2_clean_and_push_back.py      # Clean and save data back to DB and CSV
+├── 4_feature_engineering.py      # Generate new features and save them
+├── 5_model_training.ipynb        # Model training and evaluation (Jupyter)
+├── 6_streamlit_main.py           # Streamlit dashboard for EDA & Prediction
+├── employee_with_features.csv    # Final cleaned and feature-enhanced dataset
+├── Employee-Attrition.xlsx       # Original Excel dataset (not included)
+```
 
 ---
 
@@ -71,111 +70,128 @@ yaml
 ```bash
 git clone https://github.com/your-username/employee-attrition-prediction.git
 cd employee-attrition-prediction
+```
 
-2. Install required packages
+### 2. Install required packages
 
+```bash
 pip install -r requirements.txt
+```
 
-3. Setup PostgreSQL
+### 3. Setup PostgreSQL
 
-Install and run PostgreSQL on your machine.
-Create a database named test.
-Update credentials in Python files if needed.
+- Install and run PostgreSQL on your machine.
+- Create a database named `test`.
+- Update credentials in Python files if needed.
 
-4. Prepare your data
-Place the original dataset Employee-Attrition.xlsx in the project root folder or update the script paths.
+### 4. Prepare your data
 
-🚀 Usage
-1️⃣ Load Raw Data to PostgreSQL
+- Place the original dataset `Employee-Attrition.xlsx` in the project root folder or update the script paths accordingly.
 
+---
+
+## 🚀 Usage
+
+### 1️⃣ Load Raw Data to PostgreSQL
+
+```bash
 python 1_push_to_postgres.py
-Reads the Excel file and inserts the raw data into the raw_employee table.
+```
+- Reads the Excel file and inserts the raw data into the `raw_employee` table.
 
-2️⃣ Clean Data and Push Back
+---
 
+### 2️⃣ Clean Data and Push Back
+
+```bash
 python 2_clean_and_push_back.py
+```
+- Cleans unnecessary columns  
+- Encodes categorical variables  
+- Saves cleaned data to PostgreSQL and CSV  
 
-Cleans unnecessary columns
-Encodes categorical variables
-Saves cleaned data to PostgreSQL and CSV
+---
 
-3️⃣ Feature Engineering
+### 3️⃣ Feature Engineering
 
+```bash
 python 4_feature_engineering.py
+```
+- Adds new columns such as:
+  - `EngagementScore`
+  - `TenureLevel`
+  - `OverTime_Flag`
 
-Adds new columns such as:
-EngagementScore
-TenureLevel
-OverTime_Flag
+---
 
-4️⃣ Model Training
-Open the notebook and run:
+### 4️⃣ Model Training
 
+```bash
 jupyter notebook 5_model_training.ipynb
+```
+- Train models like:
+  - RandomForestClassifier
+  - Logistic Regression
+  - XGBoost
+  - LightGBM  
+- Evaluate performance using metrics like accuracy, precision, recall.
 
-Train models like:
+---
 
-RandomForestClassifier
-Logistic Regression
-XGBoost
-LightGBM
+### 5️⃣ Streamlit Dashboard
 
-Evaluate performance using metrics like accuracy, precision, recall.
-
-5️⃣ Streamlit Dashboard
-Run the interactive dashboard:
-
+```bash
 streamlit run 6_streamlit_main.py
+```
+- Use the sidebar to:
+  - Upload a new CSV  
+  - Explore the dataset visually (EDA)  
+  - Predict employee attrition using the trained model  
 
-Use the sidebar to:
+---
 
-Upload a new CSV
-Explore the dataset visually (EDA)
-Predict employee attrition using the trained model
+## 🛠️ Technologies Used
 
-🛠️ Technologies Used
+- Python 3.x  
+- Pandas, NumPy – Data manipulation  
+- Scikit-learn – ML model building  
+- XGBoost, LightGBM – Advanced classifiers  
+- SQLAlchemy, psycopg2 – PostgreSQL integration  
+- Streamlit – Interactive dashboard  
+- Plotly – Beautiful visualizations  
 
-Python 3.x
-Pandas, NumPy – Data manipulation
-Scikit-learn – ML model building
-XGBoost, LightGBM – Advanced classifiers
-SQLAlchemy, psycopg2 – PostgreSQL integration
-Streamlit – Interactive dashboard
-Plotly – Beautiful visualizations
+---
 
+## 📊 Data Description
 
-
-📊 Data Description
 The dataset contains employee-level information such as:
+
 | Feature           | Description                             |
-| ----------------- | --------------------------------------- |
+|-------------------|-----------------------------------------|
 | Age               | Employee age                            |
-| Gender            | Male/Female                             |
-| Department        | HR / Sales / R\&D                       |
-| JobRole           | Designation                             |
+| Gender            | Male / Female                           |
+| Department        | HR / Sales / R&D                        |
+| JobRole           | Employee’s designation                  |
 | BusinessTravel    | Travel frequency                        |
 | OverTime          | Whether employee works overtime         |
 | JobSatisfaction   | Satisfaction rating (1–4)               |
 | PerformanceRating | Performance score (1–4)                 |
-| YearsAtCompany    | Tenure in years                         |
-| TotalWorkingYears | Total experience                        |
-| Attrition         | Target variable: 1 = Yes (left), 0 = No |
+| YearsAtCompany    | Years spent at the company              |
+| TotalWorkingYears | Total industry experience               |
+| Attrition         | 1 = Yes (left), 0 = No (stayed)         |
+
+---
 
 
-📬 Contact
+---
+
+## 📬 Contact
+
 For any questions or feedback, feel free to reach out:
 
-Your Name – lokesh.waran1392@gmail.com
+- **Your Name** – [lokesh.waran1392@gmail.com](mailto:lokesh.waran1392@gmail.com)  
+- **GitHub** – [Logesh1392](https://github.com/Logesh1392)
 
-GitHub – Logesh1392
+---
 
 Thank you for exploring the Employee Attrition Prediction Project! 🚀
-
-yaml
-
-
-
-
-
-
-
